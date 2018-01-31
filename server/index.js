@@ -34,24 +34,6 @@ io.on("connection", socket => {
   });
 });
 
-// users.push(currentUser);
-
-// socket.emit("user list", users);
-// socket.broadcast.emit("user list", users);
-
-// socket.on("makeAdmin", user => {
-//   console.log("admin");
-//   socket.join("admin");
-// });
-
-// socket.on("question", question => {
-//   questions.push(question);
-//   socket.emit("question added", question);
-//   socket.to("admin").emit("question added", questions);
-// });
-
-// socket.on('editName', username => () )
-
 http.listen(3001, () => {
   console.log("listening on 3000");
 });
