@@ -6,7 +6,9 @@ const io = require("socket.io")(http);
 let db;
 
 if (!process.env.PORT) {
-  app.use(express.static(`${__dirname}/../build`));
+  let use = `${__dirname}/../build`;
+  console.log(use);
+  app.use(express.static(use));
 }
 app.get("/api/", (req, res) => {
   res.send("<h1>Hello</h1>");
