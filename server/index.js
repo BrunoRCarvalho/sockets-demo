@@ -1,9 +1,13 @@
 require("dotenv").config();
-const app = require("express")();
+const express = require("express");
+const app = express();
 const http = require("http").Server(app);
 const io = require("socket.io")(http);
 let db;
 
+if (!process.env.PORT) {
+  app.use(express.static(`${__dirname}/../build`));
+}
 app.get("/api/", (req, res) => {
   res.send("<h1>Hello</h1>");
 });
