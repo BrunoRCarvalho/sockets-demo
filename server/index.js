@@ -4,7 +4,7 @@ const http = require("http").Server(app);
 const io = require("socket.io")(http);
 let db;
 
-app.get("/", (req, res) => {
+app.get("/api/", (req, res) => {
   res.send("<h1>Hello</h1>");
 });
 
@@ -34,6 +34,6 @@ io.on("connection", socket => {
   });
 });
 
-http.listen(3001, () => {
-  console.log("listening on 3000");
+http.listen(process.env.PORT || 80, () => {
+  console.log(`listening on ${process.env.PORT || 80}`);
 });
