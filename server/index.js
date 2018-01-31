@@ -6,7 +6,7 @@ const io = require("socket.io")(http);
 let db;
 
 if (!process.env.PORT) {
-  let use = `${__dirname}/../build`;
+  let use = `${__dirname}/../client/build`;
   console.log(use);
   app.use(express.static(use));
 }
