@@ -97,7 +97,7 @@ class App extends Component {
         </div>
         <h1>{this.state.users.length}</h1>
         <h3>{this.state.users.length === 1 ? "user" : "users"} online</h3>
-        <button onClick={this.next}>Next Question</button>
+        {isAdmin && <button onClick={this.next}>Next Question</button>}
       </div>
     );
   }
